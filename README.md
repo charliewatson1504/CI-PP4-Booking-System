@@ -35,6 +35,20 @@
 
 ## Project Goals
 
+### Primary goals of the website for site users are as follows:
+
+- To register for an account on the website and receive an email after successful registration
+- To login or logout from the website
+- To recover my password in case it is forgotten
+- To have a personalised user profile with showing booked classes
+- To post a comment on a blog post
+- To view website news, and comment on a news item
+
+### Primary goals of the website for the site owners are as follows:
+
+- To add, edit and delete PT sessions
+- To add, edit and delete website news and events information
+
 ## User Stories
 
 ### First Time Visitor
