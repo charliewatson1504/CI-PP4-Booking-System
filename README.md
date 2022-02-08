@@ -51,21 +51,36 @@
 
 ## User Stories
 
-### First Time Visitor
+### User
+1. As a **User** I can **view what classes are taught** so that **I can attend a class.**
+2. As a **User** I can **book a fitness session** so that **I can attend a PT session.**
+3. As a **User** I can **find links to the gyms social media pages** so that **I can connect via social channels.**
+4. As a **User** I can **sign up to a newsletter** so that **keep up-to-date with whats happening at the gym.**
+5. As a **User** I can **log in to my account once I click on the verification link in the email I receive after sign up** so that I **can view my profile information and booked PT sessions.**
+6. As a **User** I can **comment on a news post** so that **I can engage with the site and staff members.**
+7. As a **User** I can **view pictures of gym and the various activities that happen within it** so that **I can get a feel for the place should I be thinking of joining.**
 
-1. As a **First Time Visitor**
+### Returning User
+8. As a **Returning User** I can **log in and book another session** so that **continue with my fitness journey.**
+9. As a **Returning User** I can **log in and cancel a session and will be asked to confirm the cancellation** so that **I can update the PT if my plans change.**
+10. As a **Returning User** I can **log in and amend a session** so that **I can update the PT if my plans change.**
 
-### Returning Visitor
+### User and Staff Member
+11. As a **User/Staff member** I can **request a new password if I forget my current password via an email** so that **I can log into my account should I forget my password.**
 
-8. As a **Returning Visitor**
+### Staff Member
+12. As a **Staff Member** I can **edit and/or delete news and event posts** so that **I can amend incorrect details or remove out of date posts.**
+13. As a **Staff Member** I can **add a new news and event post** so that **I can keep the site looking fresh with new updates.**
+14. As a **Staff Member** I can **confirm amendments/deletions** so that **I don’t make changes I can’t undo.**
+15. As a **Staff Member** I can **create a post and set it to draft** so that **Users cannot see the post until published.**
+16. As a **Staff Member** I can **create a post and set it to published** so that **Users can see the post when ready.**
+17. As a **Staff Member** I can **approve comments before they are viewable on the site** so that **inappropriate comments are not posted to the site.**
 
-## Site Owner Goals
-
-11. As a **Site Owner**
-
-## User Requirements and Expectations
-
-1.
+### Site Owner
+18. As a **Site Owner** I can **view my site on different devices** so that **the users can interact no matter which device they use.**
+19. As a **Site Owner** I can **allow users to register with the site** so that **users can book classes online.**
+20. As a **Site Owner** I can **users be navigated to the applicable 400, 403, 404 or 500 error page if they encounter an error on the site** so that **they understand the error that has occurred and easily find their way back to the home page without using the browser buttons and don't leave the site.**
+21. As a **Site Owner** I can **have users verify their new accounts after registering via email** so that **I know they are a valid user of the site.**
 
 # Design Choices
 
