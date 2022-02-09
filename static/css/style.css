@@ -34,3 +34,20 @@ h4 {
 	margin-bottom: 1rem;
 	font-family: 'Poppins', sans-serif;
 }
+
+/* 2. NavBar */
+/* navbar component has been built using bootstrap but has been given custom styling to fit in with the sites aesthetic */
+.container-fluid {
+	padding: 1rem 0;
+}
+
+.navbar-brand {
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+	padding: 1.5rem;
+}
+
+.navbar-brand img {
+	height: 5rem;
+	width: 12rem;
+}
