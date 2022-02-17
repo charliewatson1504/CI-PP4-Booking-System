@@ -3,7 +3,7 @@
 /****************************
 	Table of Contents
 	1. Global Styles
-
+	2. NavBar
 ****************************/
 
 /* 1. Global Styles */
@@ -46,4 +46,28 @@ h4 {
 .navbar-brand img {
 	height: 15rem;
 	width: 30rem;
+}
+
+.navbar-nav {
+	margin: 0 auto;
+}
+
+.nav-item {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.nav-link {
+	color: var(--clr-dark);
+	font-size: 3rem;
+}
+
+.nav-link.active {
+	text-decoration: underline;
+}
+
+.nav-link:hover {
+	color: var(--clr-dark);
+	transform: scale(1.05);
+	transition: transform 300ms ease-in-out;
 }
