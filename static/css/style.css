@@ -60,14 +60,18 @@ h4 {
 .nav-link {
 	color: var(--clr-dark);
 	font-size: 3rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
-.nav-link.active {
-	text-decoration: underline;
+.nav-link.active,
+.nav-link:hover {
+	background-color: var(--clr-accent);
+	color: var(--clr-light);
+	border-radius: 7%;
 }
 
 .nav-link:hover {
-	color: var(--clr-dark);
 	transform: scale(1.05);
 	transition: transform 300ms ease-in-out;
 }
