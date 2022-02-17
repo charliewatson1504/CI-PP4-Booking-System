@@ -80,7 +80,7 @@ h4 {
 	background-color: var(--clr-accent);
 	color: var(--clr-light);
 	border-radius: 7%;
-	box-shadow: var(--clr-dark);
+	box-shadow: 0.2rem 0.2rem 1rem var(--clr-dark);
 	font-size: 2rem;
 	padding: 1rem;
 	font-weight: bold;
@@ -88,5 +88,8 @@ h4 {
 }
 
 .btn:hover {
-
+	color: var(--clr-accent);
+	background-color: var(--clr-light);
+	transform: scale(1.05);
+	transition: transform 300ms ease-in-out;
 }
