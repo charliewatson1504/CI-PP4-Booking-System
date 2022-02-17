@@ -75,3 +75,18 @@ h4 {
 	transform: scale(1.05);
 	transition: transform 300ms ease-in-out;
 }
+
+.btn {
+	background-color: var(--clr-accent);
+	color: var(--clr-light);
+	border-radius: 7%;
+	box-shadow: var(--clr-dark);
+	font-size: 2rem;
+	padding: 1rem;
+	font-weight: bold;
+	margin: 1.5rem;
+}
+
+.btn:hover {
+
+}
