@@ -37,17 +37,13 @@ h4 {
 
 /* 2. NavBar */
 /* navbar component has been built using bootstrap but has been given custom styling to fit in with the sites aesthetic */
-.container-fluid {
-	padding: 1rem 0;
-}
 
-.navbar-brand {
-	margin-left: 1rem;
-	margin-bottom: 1rem;
-	padding: 1.5rem;
+.navbar {
+	padding: 1.5rem 2.5rem;
+	font-size: 2rem;
 }
 
 .navbar-brand img {
-	height: 5rem;
-	width: 12rem;
+	height: 15rem;
+	width: 30rem;
 }
