@@ -105,3 +105,16 @@ h4 {
 .footer {
 	border-top: 1px solid black;
 }
+
+.footer-text {
+	font-size: 1.5rem;
+}
+
+.footer-col {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.social-links i {
+	font-size: 3.5rem;
+}
