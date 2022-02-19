@@ -104,6 +104,9 @@ h4 {
 
 .footer {
 	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .footer-text {
@@ -115,6 +118,15 @@ h4 {
 	padding-right: 1.5rem;
 }
 
-.social-links i {
+.fa-brands {
 	font-size: 3.5rem;
+}
+
+.footer-links {
+	font-size: 1.5rem;
+}
+
+.copyright {
+	font-size: 1.5rem;
+	margin-top: 1rem;
 }
