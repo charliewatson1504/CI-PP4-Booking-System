@@ -31,8 +31,11 @@
 
 .card {
     text-align: center;
+    padding: 4rem;
+    border: none;
 }
 
-.card img {
-    height: 300px;
+.card p {
+    font-size: 1.5rem;
+    height: 10rem;
 }
