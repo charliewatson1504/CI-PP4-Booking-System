@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block content %}
 
-    <div>New home page</div>
+<section id="hero-img">
+    <div class="hero-img">
+        <h1 class="text-align-center">YOUR JOURNEY STARTS HERE</h1>
+    </div>
+</section>
 
 {% endblock %}
