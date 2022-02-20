@@ -1,7 +1,11 @@
 /****************************
 	Table of Contents
 	1. Hero Section
+    2. News Section
+    3. Classes Section
 ****************************/
+
+/* 1. Hero Section */
 
 .hero-img {
     background:url(../img/hero.jpg) no-repeat center center;
@@ -15,4 +19,20 @@
     margin: auto 0;
     font-size: 4rem;
     padding-top: 150px;
+}
+
+/* News Section */
+
+#news-section {
+    height: 500px;
+}
+
+/* Classes Section */
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    height: 300px;
 }
