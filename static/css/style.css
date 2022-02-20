@@ -126,6 +126,16 @@ h4 {
 	font-size: 1.5rem;
 }
 
+.news-row {
+	width: 50%;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+}
+
+#newsletter-form .row .col input {
+	font-size: 1.5rem;
+}
+
 .copyright {
 	font-size: 1.5rem;
 	margin-top: 1rem;
