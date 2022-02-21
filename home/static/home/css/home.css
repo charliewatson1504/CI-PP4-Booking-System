@@ -3,6 +3,7 @@
 	1. Hero Section
     2. News Section
     3. Classes Section
+    4. Classes Page
 ****************************/
 
 /* 1. Hero Section */
@@ -21,13 +22,13 @@
     padding-top: 150px;
 }
 
-/* News Section */
+/* 2. News Section */
 
 #news-section {
     height: 500px;
 }
 
-/* Classes Section */
+/* 3. Classes Section */
 
 .card {
     text-align: center;
@@ -39,3 +40,6 @@
     font-size: 1.5rem;
     height: 10rem;
 }
+
+/* 4. Classes page */
+
