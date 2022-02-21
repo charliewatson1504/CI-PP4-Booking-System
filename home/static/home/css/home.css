@@ -43,3 +43,14 @@
 
 /* 4. Classes page */
 
+.table thead tr th {
+    font-size: 2rem;
+    font-weight: bold;
+	background-color: #E80004;
+    color: white;
+}
+
+.table tbody tr td,
+.table tbody tr th {
+    font-size: 1.5rem;
+}
