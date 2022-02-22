@@ -6,3 +6,6 @@ def index(request):
 
 def classes(request):
     return render(request, 'home/classes.html')
+
+def about(request):
+    return render(request, 'home/about.html')
