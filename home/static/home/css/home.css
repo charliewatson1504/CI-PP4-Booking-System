@@ -6,6 +6,7 @@
     4. Classes Table
     5. Classes Contact Form
     6. About Us Page
+    7. Contact Us Page
 ****************************/
 
 p {
@@ -112,4 +113,27 @@ p {
 .about-cta a {
     width: 25%;
     margin: 0 auto;
+}
+
+/* 7. Contact Us Page */
+
+.contact {
+    padding: 1rem 3rem;
+}
+
+.contact-form {
+ width: 100%;
+font-size: 1.5rem;
+}
+
+.contact-form textarea {
+    width: 100%;
+}
+
+.contact-form .row {
+    padding-bottom: 2rem;
+}
+
+.contact-form .btn {
+    width: 25%;
 }
