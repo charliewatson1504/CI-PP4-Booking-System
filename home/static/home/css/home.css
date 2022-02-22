@@ -54,3 +54,13 @@
 .table tbody tr th {
     font-size: 1.5rem;
 }
+
+.blank-row {
+    background-color: #707070;
+    border-color: #707070;
+    height: 3rem;
+}
+
+#classes-table {
+    margin: 0.5rem 3rem;
+}
