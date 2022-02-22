@@ -48,6 +48,10 @@ p {
     height: 10rem;
 }
 
+.home-btn {
+    width: 80%;
+}
+
 /* 4. Classes Table */
 
 .table thead tr th {
