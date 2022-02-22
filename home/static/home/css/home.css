@@ -5,6 +5,7 @@
     3. Classes Section
     4. Classes Table
     5. Classes Contact Form
+    6. About Us Page
 ****************************/
 
 p {
@@ -103,5 +104,12 @@ p {
 
 #classes-contact-form {
     width: 50%;
+    margin: 0 auto;
+}
+
+/* 6. About Us Page */
+
+.about-cta a {
+    width: 25%;
     margin: 0 auto;
 }

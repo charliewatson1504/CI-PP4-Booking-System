@@ -43,6 +43,10 @@ h4 {
 	text-align: center;
 }
 
+.text-align-left {
+	text-align: left;
+}
+
 /* 2. NavBar */
 /* navbar component has been built using bootstrap but has been given custom styling to fit in with the sites aesthetic */
 
