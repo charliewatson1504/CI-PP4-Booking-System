@@ -3,7 +3,10 @@
 /****************************
 	Table of Contents
 	1. Global Styles
-	2. NavBar
+	2. Utilities
+	3. NavBar
+	4. Footer
+	5. Login/Signup
 ****************************/
 
 /* 1. Global Styles */
@@ -37,7 +40,7 @@ h4 {
 	font-family: 'Poppins', sans-serif;
 }
 
-/* Utilities */
+/* 2. Utilities */
 
 .text-align-center {
 	text-align: center;
@@ -47,7 +50,7 @@ h4 {
 	text-align: left;
 }
 
-/* 2. NavBar */
+/* 3. NavBar */
 /* navbar component has been built using bootstrap but has been given custom styling to fit in with the sites aesthetic */
 
 .navbar {
@@ -106,7 +109,7 @@ h4 {
 	transition: transform 300ms ease-in-out;
 }
 
-/* Footer */
+/* 4. Footer */
 
 .footer {
 	border-top: 1px solid black;
@@ -145,4 +148,18 @@ h4 {
 .copyright {
 	font-size: 1.5rem;
 	margin-top: 1rem;
+}
+
+/* 5. Login/Signup */
+
+.card-login {
+	width: 50%;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	margin: 1rem auto 2rem auto;
+	box-shadow: 0.1rem 0.1rem #000;
+}
+
+.card-login p {
+	font-size: 1.5rem;
 }
