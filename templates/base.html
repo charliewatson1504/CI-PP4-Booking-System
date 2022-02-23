@@ -42,7 +42,11 @@
                             <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                     </ul>
-                    <button class="btn">Login/Sign Up</button>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'account_logout' %}" class="btn">Logout</a>
+                    {% else %}
+                        <a href="{% url 'account_login' %}" class="btn">Login/Sign Up</a>
+                    {% endif %}
                 </div>
             </div>
         </nav>
