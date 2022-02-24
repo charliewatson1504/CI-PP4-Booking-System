@@ -19,22 +19,36 @@ class TestBookingsModels(TestCase):
         Create a test user, staff member and booking
         """
         test_user = User.objects.create_user(
-            username='tester', password='Testing')
+            username='tester', password='Testing123')
 
         test_staff = User.objects.create_user(
-            username='test_staff', password='staff123', is_staff=True)
+            username='test_staff', password='staff1234', is_staff=True)
 
-        test_booking = BookPTSession.objects.create(
-            member=test_user,
-            staff=test_staff,
-            requested_date='01/05/2022',
+        self.booking = BookPTSession(
+            user=test_user,
+            staff=test_staff.username,
+            requested_date='2022-05-01',
             requested_time='10:00',
             status='pending',
         )
 
-    def tearDown(self):
+    def test_create_booking(self):
         """
-        Delete test user, staff member and booking
+        This test tests the booking of a PT session
+        """
+        self.assertEqual(self.booking.user.username, 'tester')
+        self.assertEqual(self.booking.staff, 'test_staff')
+        self.assertEqual(self.booking.requested_date, '2022-05-01')
+        self.assertEqual(self.booking.requested_time, '10:00')
+        self.assertEqual(self.booking.status, 'pending')
+
+    def test_user_on_delete_cascade_works(self):
+        """
+        This test test if all bookings are deleted
+        for user are removed when user is deleted
         """
         User.objects.all().delete()
-        BookPTSession.objects.all().delete()
+
+        booking = len(BookPTSession.objects.all())
+
+        self.assertAlmostEqual(booking, 0)
