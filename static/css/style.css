@@ -30,6 +30,7 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	max-width: 1450px;
 	margin: 0 auto;
+	font-size: 1.5rem;
 }
 
 h1,
@@ -158,8 +159,4 @@ h4 {
 	padding-bottom: 3rem;
 	margin: 1rem auto 2rem auto;
 	box-shadow: 0.1rem 0.1rem #000;
-}
-
-.card-login p {
-	font-size: 1.5rem;
 }
