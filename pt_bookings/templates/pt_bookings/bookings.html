@@ -2,13 +2,18 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'pt_bookings/css/bookings.css' %}">
 {% endblock %}
 
 {% block head_title %}PT Sessions{% endblock %}
-{% load crispy_form_tags %}
+{% load crispy_forms_tags %}
 {% block content %}
 
-{{booking_form | crispy}}
+{% csrf_token %}
+<div class="card card-login text-align-center">
+    
+    {{booking_form | crispy}}
+
+</div>
 
 {% endblock %}

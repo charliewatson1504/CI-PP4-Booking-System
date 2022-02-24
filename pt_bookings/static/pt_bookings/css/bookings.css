@@ -1,0 +1,9 @@
+body {
+    font-size: 1.5rem;
+}
+
+.card {
+    text-align: center;
+    padding: 4rem;
+    border: none;
+}
