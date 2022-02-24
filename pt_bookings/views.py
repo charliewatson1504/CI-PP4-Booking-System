@@ -26,7 +26,7 @@ class BookASession(View):
             url = reverse('login')
             return HttpResponseRedirect(url)
         
-        return render(request, "bookings.html",
+        return render(request, "pt_bookings/bookings.html",
                         {'booking_form': booking_form})
 
 
