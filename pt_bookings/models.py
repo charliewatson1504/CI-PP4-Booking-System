@@ -1,7 +1,6 @@
 # Imports
 # ---------------------------------------------------------------
 # 3rd party:
-from curses.ascii import US
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -22,9 +21,9 @@ time_choices = (
 
 # Status of PT booking
 status_choices = (
-    ("confirmed","confirmed"),
-    ("rejected","rejected"),
-    ("pending","pending"),
+    ("confirmed", "confirmed"),
+    ("rejected", "rejected"),
+    ("pending", "pending"),
 )
 
 
@@ -48,6 +47,9 @@ class BookPTSession(models.Model):
         max_length=10, choices=time_choices, default='10:00')
     status = models.CharField(
         max_length=10, choices=status_choices, default='pending')
-    
+
     def __str__(self):
+        """
+        Return primary key
+        """
         return str(self.pk)
