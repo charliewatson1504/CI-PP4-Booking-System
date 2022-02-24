@@ -11,7 +11,7 @@ class BookingForm(forms.ModelForm):
     A class for the PT booking form
     """
 
-    requested_date = forms.DateField(input_formats=settings.DATE_INPUT_FORMAT)
+    requested_date = forms.DateField(input_formats=['%d/%m/%y %H:%M'])
 
     class Meta:
         model = BookPTSession
