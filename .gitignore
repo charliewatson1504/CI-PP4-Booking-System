@@ -8,4 +8,4 @@ node_modules/
 .github/
 cloudinary_python.txt
 .vscode
-db.sqlite3
+*.sqlite3
