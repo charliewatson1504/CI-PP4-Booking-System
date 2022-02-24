@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from django.conf.locale.en import formats as en_formats
+from django.contrib.messages import constants as messages
 
 if os.path.isfile("env.py"):
     import env
@@ -57,6 +59,15 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
+
+# Message settings
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
 
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -167,6 +178,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+en_formats.DATE_FORMAT = ['%d/%M/%Y', ]
+
+en_formats.DATETIME_FORMAT = 'd/m/Y'
+
+TIME_INPUT_FORMATS = ['%H:%M', ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
