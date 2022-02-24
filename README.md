@@ -96,6 +96,14 @@ The wireframes for the site were created in Adobe XD and are linked below for De
 2. <details><summary>Tablet</summary><img src="#"></details>
 3. <details><summary>Mobile</summary><img src="#"></details>
 
+## Database
+
+### Physical database model
+
+The below diagram shows all of the fields stored in the database, with details of their data types, and how it is structured.
+
+![Database model](https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/database/database-diagram.png)
+
 # Technologies Used
 ## Languages
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
