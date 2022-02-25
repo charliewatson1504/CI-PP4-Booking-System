@@ -5,13 +5,16 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-{% csrf_token %}
-<div class="card card-login text-align-center">
-    <h2>Personal Training Session Booking Form</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="card card-login text-align-center">
+        <h2>Personal Training Session Booking Form</h2>
+    
+        {{booking_form | crispy}}
+    
+        <button class="btn" type="submit">Book</button>
+    </div>
+</form>
 
-    {{booking_form | crispy}}
-
-    <button class="btn" type="submit">Book</button>
-</div>
 
 {% endblock %}
