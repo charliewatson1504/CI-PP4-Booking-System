@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+# import django_heroku
 import dj_database_url
 from django.conf.locale.en import formats as en_formats
 from django.contrib.messages import constants as messages
@@ -33,7 +33,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = development
 
 if development:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'home',
     'pt_bookings',
+    'news_and_events',
 ]
 
 SITE_ID = 1
@@ -135,17 +136,17 @@ WSGI_APPLICATION = 'ironworks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if development:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+# if development:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+# else:
+#     DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 
 # Password validation
@@ -206,4 +207,4 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+# django_heroku.settings(locals())

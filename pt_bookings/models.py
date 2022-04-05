@@ -32,6 +32,7 @@ staff = User.objects.filter(is_staff=True)
 for stf in staff:
     ptStaff.append((str(stf.username), str(stf.username)))
 
+
 class BookPTSession(models.Model):
     """
     Model for booking a PT session using information from

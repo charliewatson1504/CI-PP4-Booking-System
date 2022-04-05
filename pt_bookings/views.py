@@ -1,5 +1,6 @@
 import datetime
-from django.shortcuts import render, reverse
+from django.shortcuts import render
+from django.urls import reverse
 from django.views import View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
@@ -37,7 +38,7 @@ class BookASession(View):
                 request, messages.ERROR,
                 "Sorry, you are not logged in."
                 "Please login here.")
-            url = reverse('login')
+            url = reverse('account_login')
             return HttpResponseRedirect(url)
 
         return render(request, "pt_bookings/bookings.html",
