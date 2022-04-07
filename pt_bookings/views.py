@@ -72,7 +72,9 @@ def book_a_session(request):
                         'pt_bookings/bookings.html',
                         {'booking_form': booking_form})
                 else:
-                    booking_form.save()
+                    booking_data = booking_form.save(commit=False)
+                    booking_data.user = request.user
+                    booking_data.save()
 
                     messages.add_message(
                         request, messages.SUCCESS,
