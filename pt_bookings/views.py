@@ -26,7 +26,7 @@ def book_a_session(request):
     A view for booking a PT session
 
     Args:
-        request (object): _HTTP request object
+        request (object): HTTP request object
 
     Returns:
         renders the booking form
@@ -101,3 +101,23 @@ def book_a_session(request):
                 "Please try again.")
             url = reverse('bookings')
             return HttpResponseRedirect(url)
+
+
+def view_booked_sessions(request):
+    """
+    A view to view booked sessions    
+
+    Args:
+        request (object): HTTP request object
+    
+    Returns:
+        renders booked sessions for user
+    """
+    if request.user.is_authenticated:
+        booked_sessions = BookPTSession.objects.filter(user=request.user).order_by('-requested_date')
+    
+        context = {
+            'sessions': booked_sessions
+        }
+
+        return render(request, 'pt_bookings/booked_sessions.html', context)

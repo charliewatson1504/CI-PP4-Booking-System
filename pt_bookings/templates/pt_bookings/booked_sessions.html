@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}PT Sessions{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div>
+    {% for session in sessions %}
+        <p>{{ session.staff }}</p>
+        <p>{{ session.requested_date }}</p>
+        <p>{{ session.requested_time }}</p>
+        <p>{{ session.status }}</p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
