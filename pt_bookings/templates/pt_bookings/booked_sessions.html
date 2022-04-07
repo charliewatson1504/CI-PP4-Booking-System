@@ -7,22 +7,41 @@
 
 <div>
     <table class="table table-striped table-dark table-responsive-lg">
-        <thead>
-            <tr>
-                <th>Personal Trainer</th>
-                <th>Requested Date and Time</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for session in sessions %}
-            <tr>
-                <td>{{ session.staff }}</td>
-                <td>{{ session.requested_date }} @ {{ session.requested_time }}</td>
-                <td>{{ session.status }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+        {% if user.is_superuser %}
+            <thead>
+                <tr>
+                    <th>Client</th>
+                    <th>Requested Date and Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for session in sessions %}
+                <tr>
+                    <td>{{ session.user }}</td>
+                    <td>{{ session.requested_date }} @ {{ session.requested_time }}</td>
+                    <td>{{ session.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        {% else %}
+            <thead>
+                <tr>
+                    <th>Personal Trainer</th>
+                    <th>Requested Date and Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for session in sessions %}
+                <tr>
+                    <td>{{ session.staff }}</td>
+                    <td>{{ session.requested_date }} @ {{ session.requested_time }}</td>
+                    <td>{{ session.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        {% endif %}
     </table>
 </div>
 

@@ -114,10 +114,23 @@ def view_booked_sessions(request):
         renders booked sessions for user
     """
     if request.user.is_authenticated:
-        booked_sessions = BookPTSession.objects.filter(user=request.user).order_by('-requested_date')
+        if request.user.is_superuser:
+            booked_sessions = BookPTSession.objects.filter(staff=request.user).order_by('-requested_date')
+        else:
+            booked_sessions = BookPTSession.objects.filter(user=request.user).order_by('-requested_date')
     
         context = {
             'sessions': booked_sessions
         }
 
         return render(request, 'pt_bookings/booked_sessions.html', context)
+
+
+def edit_booking(request, booking_id):
+    """
+    A view to edit a booked session
+
+    Args:
+        request (object): HTTP request object
+        booking_id: Booked session id
+    """
