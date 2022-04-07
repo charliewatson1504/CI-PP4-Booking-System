@@ -1,7 +1,6 @@
 import datetime
 from django.shortcuts import render
 from django.urls import reverse
-from django.views import View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 
@@ -22,15 +21,17 @@ def check_if_available(user_requested_staff, user_requested_date,
     return booking_slot
 
 
-# Create your views here.
-class BookASession(View):
+def book_a_session(request):
     """
-    This view allows users to book a session
+    A view for booking a PT session
+
+    Args:
+        request (object): _HTTP request object
+
+    Returns:
+        renders the booking form
     """
-    def get(self, request, *args, **kwargs):
-        """
-        Opens booking form
-        """
+    if request.method == 'GET':
         if request.user.is_authenticated:
             booking_form = BookingForm()
         else:
@@ -43,54 +44,58 @@ class BookASession(View):
 
         return render(request, "pt_bookings/bookings.html",
                       {'booking_form': booking_form})
+    else:
+        if request.method == 'POST':
+            booking_form = BookingForm(data=request.POST)
 
-    def post(self, request, *args, **kwargs):
-        """
-        Post form if valid
-        """
-        booking_form = BookingForm(data=request.POST)
+            if booking_form.is_valid():
+                user_requested_staff = request.POST.get('staff')
+                user_requested_date = request.POST.get('requested_date')
+                user_requested_time = request.POST.get('requested_time')
 
-        if booking_form.is_valid():
-            user_requested_staff = request.POST.get('staff')
-            user_requested_date = request.POST.get('requested_date')
-            user_requested_time = request.POST.get('requested_time')
+                correct_date_format = datetime.datetime.strptime(
+                    user_requested_date, "%d/%m/%Y").strftime('%Y-%m-%d')
 
-            correct_date_format = datetime.datetime.strptime(
-                user_requested_date, "%d/%m/%Y").strftime('%Y-%m-%d')
+                booking_available = check_if_available(
+                    user_requested_staff,
+                    correct_date_format,
+                    user_requested_time)
 
-            booking_available = check_if_available(
-                user_requested_staff,
-                correct_date_format,
-                user_requested_time)
+                if booking_available > 0:
+                    messages.add_message(
+                        request, messages.ERROR,
+                        "Unfortunately this slot is already booked"
+                        f"{user_requested_time} on {user_requested_date}.")
 
-            if booking_available > 0:
+                    return render(
+                        request,
+                        'pt_bookings/bookings.html',
+                        {'booking_form': booking_form})
+                else:
+                    booking_form.save()
+
+                    messages.add_message(
+                        request, messages.SUCCESS,
+                        f"Your booking with {user_requested_staff} "
+                        f"on {user_requested_date} at {user_requested_time}"
+                        f" has been submitted.")
+                    url = reverse('bookings')
+                    return HttpResponseRedirect(url)
+
+            else:
                 messages.add_message(
                     request, messages.ERROR,
-                    "Unfortunately this slot is already booked"
-                    f"{user_requested_time} on {user_requested_date}.")
+                    "Sorry, something was not quite right. "
+                    "Please try again.")
 
                 return render(
                     request,
                     'pt_bookings/bookings.html',
                     {'booking_form': booking_form})
-            else:
-                booking_form.save()
-
-                messages.add_message(
-                    request, messages.SUCCESS,
-                    f"Your booking with {user_requested_staff} "
-                    f"on {user_requested_date} at {user_requested_time}"
-                    f" has been submitted.")
-                url = reverse('bookings')
-                return HttpResponseRedirect(url)
-
         else:
             messages.add_message(
                 request, messages.ERROR,
                 "Sorry, something was not quite right. "
                 "Please try again.")
-
-            return render(
-                request,
-                'pt_bookings/bookings.html',
-                {'booking_form': booking_form})
+            url = reverse('bookings')
+            return HttpResponseRedirect(url)
