@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}PT Sessions{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="card card-login text-align-center">
+        <h2>Personal Training Session Booking Form</h2>
+    
+        {{booking_form | crispy}}
+    
+        <button class="btn" type="submit">Amend</button>
+    </div>
+</form>
+
+
+{% endblock %}

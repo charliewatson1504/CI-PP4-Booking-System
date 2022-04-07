@@ -1,5 +1,5 @@
 import datetime
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
@@ -118,12 +118,13 @@ def view_booked_sessions(request):
             booked_sessions = BookPTSession.objects.filter(staff=request.user).order_by('-requested_date')
         else:
             booked_sessions = BookPTSession.objects.filter(user=request.user).order_by('-requested_date')
-    
+
+        template = 'pt_bookings/booked_sessions.html'
         context = {
             'sessions': booked_sessions
         }
 
-        return render(request, 'pt_bookings/booked_sessions.html', context)
+        return render(request, template, context)
 
 
 def edit_booking(request, booking_id):
@@ -134,3 +135,60 @@ def edit_booking(request, booking_id):
         request (object): HTTP request object
         booking_id: Booked session id
     """
+    if not request.user.is_authenticated:
+        messages.add_message(
+            request, messages.ERROR,
+            "Sorry, you are not logged in."
+            "Please login here.")
+        url = reverse('account_login')
+        return HttpResponseRedirect(url)
+
+    booking_to_edit = get_object_or_404(BookPTSession, pk=booking_id)
+
+    if request.method == 'POST':
+        booking_form = BookingForm(request.POST, instance=booking_to_edit)
+
+        if booking_form.is_valid():
+            user_requested_staff = request.POST.get('staff')
+            user_requested_date = request.POST.get('requested_date')
+            user_requested_time = request.POST.get('requested_time')
+
+            correct_date_format = datetime.datetime.strptime(
+                user_requested_date, "%d/%m/%Y").strftime('%Y-%m-%d')
+
+            booking_available = check_if_available(
+                user_requested_staff,
+                correct_date_format,
+                user_requested_time)
+
+            if booking_available > 0:
+                messages.add_message(
+                    request, messages.ERROR,
+                    "Unfortunately this slot is already booked"
+                    f"{user_requested_time} on {user_requested_date}.")
+
+                return render(
+                    request,
+                    'pt_bookings/edit_booking.html',
+                    {'booking_form': booking_form})
+            else:
+                booking_form.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    "Your booking has been updated")
+                url = reverse('booked_sessions')
+                return HttpResponseRedirect(url)
+        else:
+            messages.add_message(
+                request, messages.ERROR, "Sorry, edit was not successful.")
+            url = reverse('booked_sessions')
+            return HttpResponseRedirect(url)
+    else:
+        booking_form = BookingForm(instance=booking_to_edit)
+
+    template = 'pt_bookings/edit_booking.html'
+    context = {
+        'booking_form': booking_form,
+        'booked_session': booking_to_edit,
+    }
+    return render(request, template, context)

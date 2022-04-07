@@ -30,6 +30,7 @@
                     <th>Personal Trainer</th>
                     <th>Requested Date and Time</th>
                     <th>Status</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +39,7 @@
                     <td>{{ session.staff }}</td>
                     <td>{{ session.requested_date }} @ {{ session.requested_time }}</td>
                     <td>{{ session.status }}</td>
+                    <td><a href="{% url 'edit_booking' session.id %}">Update</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
