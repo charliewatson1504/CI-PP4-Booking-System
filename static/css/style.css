@@ -72,8 +72,19 @@ h4 {
 }
 
 .navbar-brand img {
-	height: 15rem;
-	width: 30rem;
+	height: auto;
+	width: 100%;
+	max-width: 30rem;
+	max-height: 15rem;
+}
+
+/* media query */
+
+@media screen and (max-width: 447px) {
+	.navbar-brand img {
+		height: 7.5rem;
+		width: 15rem;
+	}
 }
 
 .navbar-nav {
