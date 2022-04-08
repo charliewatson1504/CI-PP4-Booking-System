@@ -108,34 +108,56 @@
     <footer>
         <div class="container-fluid footer">
             <div class="row">
-                <div class="col-4 text-align-center footer-col">
-                    <a href="">
-                        <img src="{% static 'img/logo.png' %}" alt="" width="300px">
+                <div class="col-md-4 text-align-center footer-col">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'img/logo.png' %}" class="img-fluid" alt="ironworks logo" width="100%" height="auto">
                     </a>
                     <p class="footer-text">Ironworks Martial Arts Centre is a Reality Based MArtial Arts School based in the North East of England</p>
                     <div class="row justify-content-around">
                         <span class="col-4">
-                            <i class="fa-brands fa-facebook-square"></i>
+                            <a href="http://www.facebook.com/ironworksmartialarts" class="text-black" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook-square"></i>
+                            </a>
                         </span>
                         <span class="col-4">
-                            <i class="fa-brands fa-youtube"></i>
+                            <a href="https://www.youtube.com/" class="text-black" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
                         </span>
                         <span class="col-4">
-                            <i class="fa-brands fa-instagram"></i>
+                            <a href="https://www.instagram.com/ironworksmartialarts" class="text-black" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
                         </span>
                     </div>
                 </div>
-                <div class="col-4 text-align-center footer-col">
+                <div class="col-md-4 text-align-center footer-col display-md">
                     <h2 class="mt-4 mb-4">WEBSITE</h2>
                     <ul class="list-unstyled footer-links">
-                        <li>About Us</li>
-                        <li>Contact Us</li>
-                        <li>Book a Session</li>
-                        <li>Login</li>
-                        <li>Sign Up</li>
+                        <li>
+                            <a href="{% url 'about' %}" class="text-black">About Us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact' %}" class="text-black">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'bookings' %}" class="text-black">Book a Session</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li>
+                            <a href="{% url 'account_logout' %}" class="text-black">Logout</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="{% url 'account_login' %}" class="text-black">Login</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'account_signup' %}" class="text-black">Sign Up</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
-                <div class="col-4 text-align-center footer-col">
+                <div class="col-md-4 text-align-center footer-col">
                     <h2 class="mt-4 mb-4">NEWSLETTER</h2>
                     <p class="footer-text">Sign up for a weekly newsletter to keep up to date about our upcoming events</p>
                     <form action="#" class="container-fluid" id="newsletter-form">

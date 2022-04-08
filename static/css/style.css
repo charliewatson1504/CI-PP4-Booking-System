@@ -51,6 +51,18 @@ h4 {
 	text-align: left;
 }
 
+.text-black {
+	color: #000;
+}
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+	.display-md {
+		display: none;
+	}
+}
+
 /* 3. NavBar */
 /* navbar component has been built using bootstrap but has been given custom styling to fit in with the sites aesthetic */
 
