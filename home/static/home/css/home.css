@@ -1,8 +1,8 @@
 /****************************
 	Table of Contents
 	1. Hero Section
-    2. News Section
-    3. Classes Section
+    2. 
+    3. 
     4. Classes Table
     5. Classes Contact Form
     6. About Us Page
@@ -29,28 +29,7 @@ p {
     padding-top: 150px;
 }
 
-/* 2. News Section */
 
-#news-section {
-    height: 500px;
-}
-
-/* 3. Classes Section */
-
-.card {
-    text-align: center;
-    padding: 4rem;
-    border: none;
-}
-
-.card p {
-    font-size: 1.5rem;
-    height: 10rem;
-}
-
-.home-btn {
-    width: 80%;
-}
 
 /* 4. Classes Table */
 

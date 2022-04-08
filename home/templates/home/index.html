@@ -14,26 +14,29 @@
         <h1 class="text-align-center">YOUR JOURNEY STARTS HERE</h1>
     </div>
 </section>
-<section id="news-section">
-    <h1>NEWS SECTION</h1>
-</section>
-<section id="classes-section">
-    <div class="row">
-        <div class="col card mx-auto">
-            <h2>Martial Arts</h2>
-            <p>The principles of Combat Athletics were born of the understanding that no system has everything needed for real-world fighting and self-defence. In order to be ready for real fighting, we must have an understanding of Striking, Grappling and Weaponry. The sessions are perfect for building the skills to improve your confidence and fitness levels in a fun and safe environment.</p>
-            <img src="{% static 'home/img/ma_card.jpg' %}" class="img-fluid" alt="2 people carrying out BJJ moves on grey mat">
-            <a href="#">
-                <button class="btn home-btn">FIND OUT MORE</button>
-            </a>
-        </div>
-        <div class="col card mx-auto">
-            <h2>Fitness</h2>
-            <p>There are often a number of barriers to entry to training and as such, we also offer classes and packages that focus more on the physical fitness aspects, such as MaXFit (Martial Arts Cross Training) and others that focus on the mental and cognitive aspects of training.</p>
-            <img src="{% static 'home/img/fitness_card.jpg' %}" class="img-fluid" alt="person performing push up outside on grass">
-            <a href="{% url 'classes' %}">
-                <button class="btn home-btn">FIND OUT MORE</button>
-            </a>
+<section>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6 text-align-center">
+                <div class="card">
+                    <img src="{% static 'home/img/ma_card.jpg' %}" class="card-img-top" alt="2 people carrying out BJJ moves on grey mat">
+                    <div class="card-body">
+                        <h2 class="card-title">Martial Arts</h2>
+                        <p class="card-text">The principles of Combat Athletics were born of the understanding that no system has everything needed for real-world fighting and self-defence. In order to be ready for real fighting, we must have an understanding of Striking, Grappling and Weaponry. The sessions are perfect for building the skills to improve your confidence and fitness levels in a fun and safe environment.</p>
+                        <a href="{% url 'classes' %}" class="btn home-btn">SEE CLASS TIMETABLE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-align-center">
+                <div class="card">
+                    <img src="{% static 'home/img/fitness_card.jpg' %}" class="card-img-top" alt="person performing push up outside on grass">
+                    <div class="card-body">
+                        <h2 class="card-title">Fitness</h2>
+                        <p class="card-text">There are often a number of barriers to entry to training and as such, we also offer classes and packages that focus more on the physical fitness aspects, such as MaXFit (Martial Arts Cross Training) and others that focus on the mental and cognitive aspects of training.</p>
+                        <a href="{% url 'bookings' %}" class="btn home-btn">BOOK WITH A PT NOW</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
