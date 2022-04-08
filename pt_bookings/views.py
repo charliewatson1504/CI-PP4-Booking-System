@@ -115,9 +115,9 @@ def view_booked_sessions(request):
     """
     if request.user.is_authenticated:
         if request.user.is_superuser:
-            booked_sessions = BookPTSession.objects.filter(staff=request.user).order_by('-requested_date')
+            booked_sessions = BookPTSession.objects.filter(staff=request.user).order_by('requested_date')
         else:
-            booked_sessions = BookPTSession.objects.filter(user=request.user).order_by('-requested_date')
+            booked_sessions = BookPTSession.objects.filter(user=request.user).order_by('requested_date')
 
         template = 'pt_bookings/booked_sessions.html'
         context = {
@@ -144,6 +144,8 @@ def edit_booking(request, booking_id):
         return HttpResponseRedirect(url)
 
     booking_to_edit = get_object_or_404(BookPTSession, pk=booking_id)
+    booking_to_edit.requested_date = datetime.datetime.strftime(
+                            booking_to_edit.requested_date, '%d/%m/%Y')
 
     if request.method == 'POST':
         booking_form = BookingForm(request.POST, instance=booking_to_edit)
