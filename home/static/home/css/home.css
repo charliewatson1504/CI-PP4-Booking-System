@@ -1,12 +1,10 @@
 /****************************
 	Table of Contents
 	1. Hero Section
-    2. 
-    3. 
-    4. Classes Table
-    5. Classes Contact Form
-    6. About Us Page
-    7. Contact Us Page
+    2. Classes Table
+    3. Classes Contact Form
+    4. About Us Page
+    5. Contact Us Page
 ****************************/
 
 p {
@@ -29,9 +27,7 @@ p {
     padding-top: 150px;
 }
 
-
-
-/* 4. Classes Table */
+/* 2. Classes Table */
 
 .table thead tr th {
     font-size: 2rem;
@@ -55,7 +51,7 @@ p {
     margin: 0.5rem 3rem 5rem 3rem;
 }
 
-/* 5. Classes Contact Form */
+/* 3. Classes Contact Form */
 
 .red-text {
     color: #E80004;
@@ -91,14 +87,14 @@ p {
     margin: 0 auto;
 }
 
-/* 6. About Us Page */
+/* 4. About Us Page */
 
 .about-cta a {
     width: 25%;
     margin: 0 auto;
 }
 
-/* 7. Contact Us Page */
+/* 5. Contact Us Page */
 
 .contact {
     padding: 1rem 3rem;
