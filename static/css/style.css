@@ -63,6 +63,11 @@ h4 {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.hidden-md {
+		display: none;
+	}
+}
 /* 3. NavBar */
 /* navbar component has been built using bootstrap but has been given custom styling to fit in with the sites aesthetic */
 

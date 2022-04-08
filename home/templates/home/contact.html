@@ -8,39 +8,40 @@
 {% block head_title %}Contact Us{% endblock %}
 
 {% block content %}
-<section class="container-fluid">
-    <h1 class="text-align-center">Contact Us</h1>
-    <div class="contact">
-        <div class="row">
-            <div class="col text-align-center">
-                <h3>Get In Touch</h3>
-                <p><i class="fa-solid fa-location-dot"></i> Mandale Business Park, Durham</p>
-                <p><i class="fa-solid fa-phone"></i> 07717 755 970</p>
-                <form action="" class="contact-form">
-                    <div class="row">
-                      <div class="col">
-                        <input type="text" name="name" id="name" placeholder="Name">
-                      </div>
-                      <div class="col">
-                        <input type="email" name="email" id="email" placeholder="Email Address">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <textarea name="classes-choice" id="classes-choice" cols="30" rows="10" placeholder="Write your message here."></textarea>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <button type="submit" class="btn">Send</button>
-                      </div>
-                    </div>
-                  </form>
-            </div>
-            <div class="col">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.3001318477495!2d-1.5396556270544595!3d54.78961815079289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e7d6e8d4a6387%3A0xeb9d436afba319f1!2sMandale%20Business%20Park!5e1!3m2!1sen!2suk!4v1645540085879!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+<h1 class="text-align-center">Contact Us</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5 text-align-center">
+            <h3>Get In Touch</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Mandale Business Park, Durham</p>
+            <p><i class="fa-solid fa-phone"></i> 07717 755 970</p>
+            <form action="" class="contact-form">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                  </div>
+                  <div class="col">
+                    <input type="email" name="email" id="email" placeholder="Email Address">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <textarea name="classes-choice" id="classes-choice" cols="30" rows="10" placeholder="Write your message here."></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button type="submit" class="btn">Send</button>
+                  </div>
+                </div>
+              </form>
+        </div>
+        <div class="col-md-5 display-md">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.3001318477495!2d-1.5396556270544595!3d54.78961815079289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e7d6e8d4a6387%3A0xeb9d436afba319f1!2sMandale%20Business%20Park!5e1!3m2!1sen!2suk!4v1645540085879!5m2!1sen!2suk" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="col-md-5 hidden-md text-align-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2300.429500494719!2d-1.5394122839790647!3d54.78999477329825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e7d6e8d4a6387%3A0xeb9d436afba319f1!2sMandale%20Business%20Park!5e0!3m2!1sen!2suk!4v1649454560293!5m2!1sen!2suk" width="375" height="375" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
-</section>
+</div>
 {% endblock %}
