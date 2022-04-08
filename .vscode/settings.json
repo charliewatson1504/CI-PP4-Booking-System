@@ -23,5 +23,14 @@
    "files.autoSave": "off",
    "workbench.colorTheme": "Night Owl",
    "terminal.integrated.gpuAcceleration": "canvas",
-   "editor.defaultFormatter": "HookyQR.beautify"
+   "editor.defaultFormatter": "HookyQR.beautify",
+   "python.testing.unittestArgs": [
+      "-v",
+      "-s",
+      "./pt_bookings",
+      "-p",
+      "test_*.py"
+   ],
+   "python.testing.pytestEnabled": false,
+   "python.testing.unittestEnabled": true
 }
