@@ -87,6 +87,16 @@ p {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+    #classes-contact-form {
+        width: 95%;
+    }
+
+    .class-form input {
+        width: 90%;
+    }
+}
+
 /* 4. About Us Page */
 
 .about-cta a {
