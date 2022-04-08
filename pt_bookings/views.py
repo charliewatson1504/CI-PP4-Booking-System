@@ -194,3 +194,28 @@ def edit_booking(request, booking_id):
         'booked_session': booking_to_edit,
     }
     return render(request, template, context)
+
+
+def delete_booking(request, booking_id):
+    """
+    A view to delete a PT booking
+
+    Args:
+        request (object): HTTP request object
+        booking_id: Booked session id
+    """
+    if not request.user.is_authenticated:
+        messages.add_message(
+            request, messages.ERROR,
+            "Sorry, you are not logged in."
+            "Please login here.")
+        url = reverse('account_login')
+        return HttpResponseRedirect(url)
+
+    booking_to_delete = get_object_or_404(BookPTSession, pk=booking_id)
+    booking_to_delete.delete()
+    messages.add_message(
+            request, messages.SUCCESS,
+            "Booking has been cancelled")
+    url = reverse('booked_sessions')
+    return HttpResponseRedirect(url)

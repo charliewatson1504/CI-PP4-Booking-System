@@ -39,8 +39,32 @@
                     <td>{{ session.staff }}</td>
                     <td>{{ session.requested_date }} @ {{ session.requested_time }}</td>
                     <td>{{ session.status }}</td>
-                    <td><a href="{% url 'edit_booking' session.id %}" class="btn btn-success">Amend</a></td>
+                    <td>
+                        <a href="{% url 'edit_booking' session.id %}" class="btn btn-success font-large">Amend</a>
+                        <!-- Delete booking modal trigger -->
+                        <button type="button" class="btn btn-danger font-large" data-bs-toggle="modal" data-bs-target="#deleteBooking">
+                            Cancel
+                        </button>
+                        
+                    </td>
                 </tr>
+                <!-- Delete booking modal -->
+                <div class="modal fade" id="deleteBooking" tabindex="-1" aria-labelledby="deleteBookingLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title" id="deleteBookingLabel">Cancel Booking</h3>
+                        </div>
+                        <div class="modal-body">
+                          Are you sure you want to cancel booking on {{ session.requested_date }} @ {{ session.requested_time }} with {{ session.staff }}
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary font-large" data-bs-dismiss="modal">Close</button>
+                          <a href="{% url 'delete_booking' session.id %}" class="btn btn-danger font-large">Cancel Booking</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 {% endfor %}
             </tbody>
         {% endif %}
