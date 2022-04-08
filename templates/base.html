@@ -66,7 +66,7 @@
                             <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                     </ul>
-                        <a href="{% url 'account_logout' %}" class="btn">Logout</a>
+                        <a href="{% url 'account_logout' %}" class="btn btn-home">Logout</a>
                     {% else %}
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -82,7 +82,7 @@
                             <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                     </ul>
-                        <a href="{% url 'account_login' %}" class="btn">Login/Sign Up</a>
+                        <a href="{% url 'account_login' %}" class="btn btn-home">Login/Sign Up</a>
                     {% endif %}
                 </div>
             </div>
@@ -173,7 +173,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button type="submit" class="btn news-row">SUBSCRIBE</button>
+                                <button type="submit" class="btn btn-home news-row">SUBSCRIBE</button>
                             </div>
                         </div>
                     </form>

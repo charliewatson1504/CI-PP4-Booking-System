@@ -39,7 +39,7 @@
                     <td>{{ session.staff }}</td>
                     <td>{{ session.requested_date }} @ {{ session.requested_time }}</td>
                     <td>{{ session.status }}</td>
-                    <td><a href="{% url 'edit_booking' session.id %}">Update</a></td>
+                    <td><a href="{% url 'edit_booking' session.id %}" class="btn btn-success">Amend</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

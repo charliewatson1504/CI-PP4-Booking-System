@@ -120,7 +120,11 @@ h4 {
 	transition: transform 300ms ease-in-out;
 }
 
-.btn {
+.dropdown-item {
+	font-size: 2rem;
+}
+
+.btn-home {
 	background-color: var(--clr-accent);
 	color: var(--clr-light);
 	border-radius: 7%;
@@ -132,7 +136,7 @@ h4 {
 	width: fit-content;
 }
 
-.btn:hover {
+.btn-home:hover {
 	color: var(--clr-accent);
 	background-color: var(--clr-light);
 	transform: scale(1.05);
