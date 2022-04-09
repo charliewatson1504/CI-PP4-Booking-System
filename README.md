@@ -4,9 +4,9 @@
 
 ## Project Overview
 
-![Main Mockup](#)
+![Main Mockup](https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/mockup/mockup.png)
 
-[Link to live site](#)
+[Link to live site](https://ptbooking-system-ironworks.herokuapp.com/)
 
 ---
 
