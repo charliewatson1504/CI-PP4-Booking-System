@@ -87,8 +87,10 @@
 ## Colors
 
 ![Colour Pallette](https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/color-pallet/colour-pallet.png)
+
 ## Fonts
-I have used Noto Sans JP for the body text and Roboto for the headers. Both fonts are from google fonts and compliment each other well. I have used sans-serif as a back up font should the browser the user is using cannot load the google fonts.
+
+I have used Sans Pro for the body text and Poppins for the headers. Both fonts are from google fonts and compliment each other well. I have used sans-serif as a back up font should the browser the user is using cannot load the google fonts.
 
 ## Wireframes
 The wireframes for the site were created in Adobe XD and are linked below for Desktop, Tablet and Mobile devices.
@@ -151,12 +153,12 @@ Used for Spectral font throughout the site
 Used for various icons throughout the site
 - [Bootstrap](https://getbootstrap.com/)
 Used for creating a responsive navigation bar used in every header of each page. Also used for creting a modal for a booking form used on each page. Modals were used for services page in which an accordion was created using bootstrap for each service category. Bootstrap also used for creating a carousel for the review section
+- [jQuery](https://jquery.com/)
+Used for cleaner JavaScript code where necessary and datepicker function for booking form
 - [Google Maps](https://www.google.com/maps)
 Used to embed a map to the salon located on the contact us page
 - [Am I responsive](http://ami.responsivedesign.is/)
 Used to create a mulit-device mock-up that is shown at the top of the README file
-- [Convertio](https://convertio.co/png-webp/)
-Used to convert any PNG image to WEBP to improve the sites performace
 - [YouTube](https://www.youtube.com/)
 Used to host a video of the salons work and create an embedded link to use on the site
 
@@ -175,21 +177,40 @@ The homepage has ?? main sections to it:
 # Validation
 ## HTML Validation
 [W3c Markup Validation Service](https://validator.w3.org/) has been used to validate all of the HTML code within the site. All pages have passed with 0 errors and 0 warnings. Click on the below to see each screenshot:
-1. <details><summary>Homepage</summary><img src="#"></details>
+1. <details><summary>Homepage</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/html/index-html.png"></details>
+2. <details><summary>About</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/html/about-html.png"></details>
+3. <details><summary>Classes</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/html/classes-html.png"></details>
+4. <details><summary>Contact</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/html/contact-html.png"></details>
+5. <details><summary>Login</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/html/login-html.png"></details>
+6. <details><summary>Sign Up</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/html/signup-html.png"></details>
+7. <details><summary>Bookings</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/html/ptbookings-html.png"></details>
 
 ## CSS Validation
 [W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the site. The stylesheet.css file returned with 0 errors. When running on the whole page it returned with 17 errors all of which can be attributed to Bootstrap v5.0. See below link to screenshot:
-1. <details><summary>Whole Page</summary><img src="#"></details>
+1. <details><summary>Whole Page</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/css/whole-site-css.png"></details>
 
-2. <details><summary>CSS Stylesheet</summary><img src="#"></details>
+2. <details><summary>Style.css Stylesheet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/css/style-css.png"></details>
+3. <details><summary>Home.css Stylesheet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/css/home-css.png"></details>
 
 ## Accessibility Validation
-[WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) has been used to validate the site to the recognised standards when it comes to accessibility. All pages have passed with 0 errors. Click on the below to see each screenshot:
-1. <details><summary>Homepage</summary><img src="#"></details>
+[WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) has been used to validate the site to the recognised standards when it comes to accessibility. All pages have passed with 0 errors apart from 1 contrast error. Click on the below to see each screenshot:
+1. <details><summary>Homepage</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/accessibility/wave-index.png"></details>
+2. <details><summary>About</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/accessibility/wave-about.png"></details>
+3. <details><summary>Classes</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/accessibility/wave-classes.png"></details>
+4. <details><summary>Contact</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/accessibility/wave-contact.png"></details>
+5. <details><summary>Login</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/accessibility/wave-login.png"></details>
 
-## Performance
-[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to measure each pages performance. Click on the below to see each screenshot: 
-1. <details><summary>Homepage</summary><img src="#"></details>
+## Pyhton - PEP8
+[PEP8](http://pep8online.com) has been used to validate all of the python code within the site. All files have passed with 0 errors. Click on the below to see each screenshot:
+1. <details><summary>Home - Views</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/pep8/home-views-pep8.png"></details>
+2. <details><summary>PT Bookings - Forms</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/pep8/ptbookings-forms-pep8.png"></details>
+3. <details><summary>PT Bookings - Models</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/pep8/ptbookings-models-pep8.png"></details>
+4. <details><summary>PT Bookings - Views</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/pep8/ptbookings-views-pep8.png"></details>
+
+## JavaScrtip - JSHint
+[JSHint](https://jshint.com) has been used to validate all of the JavaScript code within the site. All files have passes with 0 errors. Click on the below to see each screenshot:
+1. <details><summary>email.js</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/jshint/email-js-jshint.png"></details>
+1. <details><summary>script.js</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/jshint/script-js-jshint.png"></details>
 
 # Testing of User Stories
 ### 1. As a First Time Visitor
