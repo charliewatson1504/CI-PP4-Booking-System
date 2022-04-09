@@ -160,7 +160,7 @@
                 <div class="col-md-4 text-align-center footer-col">
                     <h2 class="mt-4 mb-4">NEWSLETTER</h2>
                     <p class="footer-text">Sign up for a weekly newsletter to keep up to date about our upcoming events</p>
-                    <form action="#" class="container-fluid" id="newsletter-form">
+                    <form onsubmit="return sendMail(this);" class="container-fluid" id="newsletter-form">
                         <div class="row">
                             <div class="col">
                                 <input type="text" class="news-row" id="name" name="name" placeholder="Name">
