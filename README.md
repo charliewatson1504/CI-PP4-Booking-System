@@ -88,13 +88,39 @@
 
 ![Colour Pallette](https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/color-pallet/colour-pallet.png)
 ## Fonts
+I have used Noto Sans JP for the body text and Roboto for the headers. Both fonts are from google fonts and compliment each other well. I have used sans-serif as a back up font should the browser the user is using cannot load the google fonts.
 
 ## Wireframes
 The wireframes for the site were created in Adobe XD and are linked below for Desktop, Tablet and Mobile devices.
 ### Homepage
-1. <details><summary>Desktop</summary><img src="#"></details>
-2. <details><summary>Tablet</summary><img src="#"></details>
-3. <details><summary>Mobile</summary><img src="#"></details>
+1. <details><summary>Desktop</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/desktop/index.png"></details>
+2. <details><summary>Tablet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/tablet/index-tablet.png"></details>
+3. <details><summary>Mobile</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/mobile/index-mobile.png"></details>
+
+### Classes
+1. <details><summary>Desktop</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/desktop/classes.png"></details>
+2. <details><summary>Tablet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/tablet/classes-tablet.png"></details>
+3. <details><summary>Mobile</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/mobile/classes-mobile.png"></details>
+
+### About
+1. <details><summary>Desktop</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/desktop/about.png"></details>
+2. <details><summary>Tablet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/tablet/about-tablet.png"></details>
+3. <details><summary>Mobile</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/mobile/about-mobile.png"></details>
+
+### Contact
+1. <details><summary>Desktop</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/desktop/contact-us.png"></details>
+2. <details><summary>Tablet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/tablet/contact-us-tablet.png"></details>
+3. <details><summary>Mobile</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/mobile/contact-us-mobile.png"></details>
+
+### Book a Session
+1. <details><summary>Desktop</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/desktop/book-a-session.png"></details>
+2. <details><summary>Tablet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/tablet/book-a-session-tablet.png"></details>
+3. <details><summary>Mobile</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/mobile/book-a-session-mobile.png"></details>
+
+### Booked Sessions
+1. <details><summary>Desktop</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/desktop/profile.png"></details>
+2. <details><summary>Tablet</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/tablet/profile-tablet.png"></details>
+3. <details><summary>Mobile</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/wireframes/mobile/profile-mobile.png"></details>
 
 ## Database
 
