@@ -105,31 +105,33 @@ def book_a_session(request):
 
 def view_booked_sessions(request):
     """
-    A view to view booked sessions    
+    A view to view booked sessions
 
     Args:
         request (object): HTTP request object
-    
+
     Returns:
         renders booked sessions for user
     """
     if request.user.is_authenticated:
         if request.user.is_superuser:
-            booked_sessions = BookPTSession.objects.filter(staff=request.user).order_by('requested_date')
+            booked_sessions = BookPTSession.objects.filter(
+                                staff=request.user).order_by('requested_date')
             booked_sessions_count = BookPTSession.objects.count()
             if booked_sessions_count == 0:
                 messages.add_message(
-                request, messages.ERROR,
-                "No sessions booked.")
+                    request, messages.ERROR,
+                    "No sessions booked.")
                 url = reverse('home')
                 return HttpResponseRedirect(url)
         else:
-            booked_sessions = BookPTSession.objects.filter(user=request.user).order_by('requested_date')
+            booked_sessions = BookPTSession.objects.filter(
+                                user=request.user).order_by('requested_date')
             booked_sessions_count = BookPTSession.objects.count()
             if booked_sessions_count == 0:
                 messages.add_message(
-                request, messages.ERROR,
-                "No sessions booked, please book one here.")
+                    request, messages.ERROR,
+                    "No sessions booked, please book one here.")
                 url = reverse('bookings')
                 return HttpResponseRedirect(url)
 
