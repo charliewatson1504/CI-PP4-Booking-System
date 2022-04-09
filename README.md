@@ -213,12 +213,70 @@ The homepage has ?? main sections to it:
 1. <details><summary>script.js</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/validation/jshint/script-js-jshint.png"></details>
 
 # Testing of User Stories
-### 1. As a First Time Visitor
+### 1. As a User I can view what classes are taught so that I can attend a class
 
 |Feature|Action|Expected Result|Actual Result|
 |---|---|---|---| 
+|Open classes page|Click on classes nav link in nav bar|Classes page loads with class timetable|Works as expected|
 
-<details><summary>Screenshot to show user story test</summary><img src="#"></details>
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-1.png"></details>
+
+### 2. As a User I can book a fitness session so that I can attend a PT session.
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Book a session on bookings page|Login into account, click on PT sessions link in navbar, click on book a pt session in dropdown, fill out form, click book|Booking is logged and confirmation noted back to user|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-2.png"></details>
+
+### 3. As a User I can find links to the gyms social media pages so that I can connect via social channels.
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Click social media links|Scroll down to footer where social media links are|Clicking a link takes user to that social media site|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-3.png"></details>
+
+### 4. As a User I can sign up to a newsletter so that keep up-to-date with whats happening at the gym.
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Sign up for newsletter|Scroll down to footer, complete newsletter sign up form, click submit|Clicking submit triggers an automatic email reply confirming they have signed up to newsletter|Works as expected|
+
+<details><summary>Screenshot 1 to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-4-1.png"></details>
+<details><summary>Screenshot 2 to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-4-2.png"></details>
+
+### 5. As a User I can log in to my account once I click on the verification link in the email I receive after sign up so that I can view my profile information and booked PT sessions.
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Login into account after email verifcation is completed|At homepage click on Login/Sign Up, click on sign up link in blue, complete form and click sign up, check emails and click confirmation link, click confirm on opened page, sign in with new account details and recieve confirmation back|New account will be created, confirmation via email and able to login in with new details|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-5.png"></details>
+
+### 8. As a Returning User I can log in and book another session so that continue with my fitness journey.
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Book a session on bookings page|Login into account, click on PT sessions link in navbar, click on book a pt session in dropdown, fill out form, click book|Booking is logged and confirmation noted back to user|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-8.png"></details>
+
+### 9. As a Returning User I can log in and cancel a session and will be asked to confirm the cancellation so that I can update the PT if my plans change.
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Cancel a booked session|Login into account, click on PT sessions link in navbar, click on PT sessions then view booked sessions from dropdown, click cancel on the booking you want to cancel, confirm you want to proceed with the cancellation, confirmation given to user that booking is cancelled|Booking is cancelled and confirmation noted back to user|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-9.png"></details>
+
+### 10. As a Returning User I can log in and amend a session so that I can update the PT if my plans change.
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Amend a booked session|Login into account, click on PT sessions link in navbar, click on PT sessions then view booked sessions from dropdown, click amend on the booking you want to amend, change the details you want to on the form, click amend and confirmation given back that it has been updated|Booking is amended and confirmation noted back to user|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-10.png"></details>
 
 # Bugs
 - Bug:
