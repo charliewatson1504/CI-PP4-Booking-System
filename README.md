@@ -24,7 +24,6 @@
     - [Fonts](#fonts)
     - [Wireframes](#wireframes)
     - [Technologies Used](#technologies-used)
-    - [Features](#features)
 - [Validation](#validation)
 - [Testing](#testing)
 - [Bugs](#bugs)
@@ -162,18 +161,6 @@ Used to create a mulit-device mock-up that is shown at the top of the README fil
 - [YouTube](https://www.youtube.com/)
 Used to host a video of the salons work and create an embedded link to use on the site
 
-# Features
-This site has ?? pages with ?? features
-## Feature 1 - Home Page
-The homepage has ?? main sections to it:
-
-### Section 1 -
-
-![Feature 1 Section 1](#)
-
-### User Stories covered by this feature
-3- As a First Time Visitor
-
 # Validation
 ## HTML Validation
 [W3c Markup Validation Service](https://validator.w3.org/) has been used to validate all of the HTML code within the site. All pages have passed with 0 errors and 0 warnings. Click on the below to see each screenshot:
@@ -279,11 +266,55 @@ The homepage has ?? main sections to it:
 <details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/testing/user-story-10.png"></details>
 
 # Bugs
-- Bug:
-- Fix:
+- Bug: Deployment to heroku did not work with a "auth_user" error.
+- Fix: Uninstall django-allauth and reset databases and mirgrations.
+- Bug: Forms not having labels for accessibility.
+- Fix: Add title property to input so labels don't need to be used and affect look of site.
+- Bug: Site not responsive when viewed on smaller screen.
+- Fix: Made use of more bootstrap classes and grid to make site responsive.
+- Bug: Bootstrap components not working.
+- Fix: Updated app to newest bootstrap version and all components now working.
+- Bug: Datepicker auto selecting random date when amneding a booking.
+- Fix: Updated view function so that correct date format was used.
 
 # Deployment
 
+## Creating an Application with Heroku
+
+*Code Institute* tutorial and [Django Blog cheatsheat](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf) were followed to complete deployment.
+
+- Enter following command in the terminal so that the relevant files needed for Heroku to install your project dependencies are created - `pip3 freeze --local > requirements.txt`. A `Procfile` is also required that specifies the commands that are executed by the app on startup.
+
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and log in or create and account if you do not already have one.
+2. Click the `New` dropdown and select `Create New App`.
+3. Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+4. Select the region you are working in.
+
+### Heroku Settings
+Environment Variables need to be set up - this is key to make sure your application is deployed properly.
+- In the resources tab install 'Heroku Postgres'
+- In the Settings tab, click on `Reveal Config Vars` and set the following variables:
+    - SECRET_KEY - your chosen key
+    - CLOUDINARY_URL - your Cloudinary API environment variable
+
+### Heroku Deployment
+In the Deploy tab:
+1. Connect your Heroku account to your Github Repository following these steps:
+    1. Click the `Deploy` tab then `Github-Connect to Github`.
+    2. Enter GitHub repository name and click `Search`.
+    3. Choose the correct repository and click `Connect`.
+2. Choose to deploy the project manually whilst getting deployment correct. Automatic deployment can be set after and will generate a new application every time you push a change to Github.
+3. Click `Deploy Branch` your application will be built and once complete click `open app` to view deployed application.
+
 # Credit
 
+- Bootstrap for the following components: navbar, modals
+- Colormind for creating the colour pallette
+- YouTube for many tutorial videos on different javascript aspects.
+- w3school and mdn web docs for a great resource when stuck with how to get a specific piece of javascript code to work.
+- stackoverflow for various issues along the way
+- [Simple is better than complex](https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html) for datepicker
+
 # Acknowledgements
+- To Mo Shami, my mentor, for yet again getting me through this with great advice and support.
+- To the Code Institute slack community for finding out great advice, guidance and resources.
