@@ -15,13 +15,13 @@
             <h3>Get In Touch</h3>
             <p><i class="fa-solid fa-location-dot"></i> Mandale Business Park, Durham</p>
             <p><i class="fa-solid fa-phone"></i> 07717 755 970</p>
-            <form action="" class="contact-form">
+            <form onsubmit="return sendMail(this);" class="contact-form">
                 <div class="row">
                   <div class="col">
-                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="text" name="name" id="contact-name" placeholder="Name">
                   </div>
                   <div class="col">
-                    <input type="email" name="email" id="email" placeholder="Email Address">
+                    <input type="email" name="email" id="contact-email" placeholder="Email Address">
                   </div>
                 </div>
                 <div class="row">
