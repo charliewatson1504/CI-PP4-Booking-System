@@ -86,7 +86,7 @@
 
 ## Colors
 
-![Colour Pallette](#)
+![Colour Pallette](https://github.com/charliewatson1504/CI-PP4-Booking-System/blob/main/docs/color-pallet/colour-pallet.png)
 ## Fonts
 
 ## Wireframes
